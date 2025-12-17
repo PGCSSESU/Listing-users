@@ -93,6 +93,8 @@ export function FiltersPopover({
                 <SelectItem value="all">All</SelectItem>
                 <SelectItem value="Male">Male</SelectItem>
                 <SelectItem value="Female">Female</SelectItem>
+                <SelectItem value="Agender">Agender</SelectItem>
+                <SelectItem value="Polygender">Pollygender</SelectItem>
               </SelectContent>
             </Select>
           </div>

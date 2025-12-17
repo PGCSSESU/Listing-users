@@ -7,6 +7,7 @@ import { usersInfiniteQueryOptions } from "@/queries/users.queries";
 import { UsersToolbar } from "@/components/users/UsersToolbar";
 import { UsersTable } from "@/components/users/usersTabls";
 import { UsersHeader } from "@/components/users/UserHeader";
+import { NoUsersFound } from "@/components/users/Nousersfound";
 
 export default function UsersPage() {
   const [search, setSearch] = useState("");
@@ -15,11 +16,12 @@ export default function UsersPage() {
 
   const debouncedSearch = useDebounce(search.trim(), 300);
 
- const params = {
+  const params = {
     q: debouncedSearch || undefined,
     gender: gender === "all" ? undefined : gender,
     Role: role === "all" ? undefined : role,
   };
+
   const {
     data,
     fetchNextPage,
@@ -29,7 +31,6 @@ export default function UsersPage() {
   } = useInfiniteQuery(usersInfiniteQueryOptions(params));
 
   const users = data?.pages.flatMap((page) => page.data) ?? [];
-  console.log("Users sample:", users.slice(0, 3));
 
   if (status === "pending") {
     return <div className="p-6 text-gray-400">Loading users...</div>;
@@ -52,12 +53,25 @@ export default function UsersPage() {
         setRole={setRole}
       />
 
-      <UsersTable
-        users={users}
-        hasNextPage={hasNextPage}
-        isFetchingNextPage={isFetchingNextPage}
-        fetchNextPage={fetchNextPage}
-      />
+      {/* ✅ EMPTY STATE */}
+      {users.length === 0 ? (
+        <div className="rounded-xl border bg-background">
+          <NoUsersFound
+            onClear={() => {
+              setSearch("");
+              setGender("all");
+              setRole("all");
+            }}
+          />
+        </div>
+      ) : (
+        <UsersTable
+          users={users}
+          hasNextPage={hasNextPage}
+          isFetchingNextPage={isFetchingNextPage}
+          fetchNextPage={fetchNextPage}
+        />
+      )}
     </div>
   );
 }
