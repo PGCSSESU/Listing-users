@@ -1,3 +1,19 @@
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](backend/assets/home.png)
+
+### User Directory
+![User Directory](backend/assets/userdir.png)
+
+### Filter
+![Filter Popup](backend/assets/filter.png)
+
+### Performance Monitor
+![Performance Monitor](backend/assets/performance.png)
+
+
 # Getting Started
 
 To run this application:
