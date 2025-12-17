@@ -53,7 +53,6 @@ export default function UsersPage() {
         setRole={setRole}
       />
 
-      {/* ✅ EMPTY STATE */}
       {users.length === 0 ? (
         <div className="rounded-xl border bg-background">
           <NoUsersFound
