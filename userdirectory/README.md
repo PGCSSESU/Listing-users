@@ -1,7 +1,18 @@
 Welcome to your new TanStack app! 
 
-# Befor Running the server run the below command 
-npx json-server src/Mockdata.json --port 5001
+## 📸 Screenshots
+
+### Home Page
+![Home Page](backend/assets/home.png)
+
+### User Directory
+![User Directory](backend/assets/userdir.png)
+
+### Filter
+![Filter Popup](backend/assets/filter.png)
+
+### Performance Monitor
+![Performance Monitor](backend/assets/performance.png)
 
 # Getting Started
 
