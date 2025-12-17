@@ -2,16 +2,16 @@
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](backend/assets/home.png)
+![Home Page](Backend/assets/home.png)
 
 ### User Directory
-![User Directory](backend/assets/userdir.png)
+![User Directory](Backend/assets/userdir.png)
 
 ### Filter
-![Filter Popup](backend/assets/filter.png)
+![Filter Popup](Backend/assets/filter.png)
 
 ### Performance Monitor
-![Performance Monitor](backend/assets/performance.png)
+![Performance Monitor](Backend/assets/performance.png)
 
 
 # Getting Started
