@@ -22,19 +22,20 @@ const columns: ColumnDef<User>[] = [
     id: "name",
     header: "Name",
     cell: ({ row }) => {
-      const u = row.original;
-      return (
-        <div className="flex items-center gap-3">
-          <Avatar className="h-9 w-9">
-            <AvatarImage src={u.Avatar} />
-            <AvatarFallback>{u.first_name?.charAt(0) || "?"}</AvatarFallback>
-          </Avatar>
-          <span className="font-medium">
-            {u.first_name} {u.last_name}
-          </span>
-        </div>
-      );
-    },
+  const u = row.original; 
+
+  return (
+    <div className="flex items-center gap-3">
+      <Avatar className="h-9 w-9">
+        <AvatarImage src={u.Avatar} />
+        <AvatarFallback>{u.first_name?.charAt(0) || "?"}</AvatarFallback>
+      </Avatar>
+      <span className="font-medium">
+        {u.first_name} {u.last_name}
+      </span>
+    </div>
+  );
+}
   },
   { accessorKey: "email", header: "Email" },
   { accessorKey: "gender", header: "Gender" },

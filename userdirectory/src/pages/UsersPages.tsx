@@ -31,6 +31,7 @@ export default function UsersPage() {
   } = useInfiniteQuery(usersInfiniteQueryOptions(params));
 
   const users = data?.pages.flatMap((page) => page.data) ?? [];
+  console.log(users)
 
   if (status === "pending") {
     return <div className="p-6 text-gray-400">Loading users...</div>;

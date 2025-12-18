@@ -93,8 +93,6 @@ export function FiltersPopover({
                 <SelectItem value="all">All</SelectItem>
                 <SelectItem value="Male">Male</SelectItem>
                 <SelectItem value="Female">Female</SelectItem>
-                <SelectItem value="Agender">Agender</SelectItem>
-                <SelectItem value="Polygender">Pollygender</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -114,10 +112,13 @@ export function FiltersPopover({
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All</SelectItem>
-                <SelectItem value="Electrician">Electrician</SelectItem>
-                <SelectItem value="Architect">Architect</SelectItem>
-                <SelectItem value="Supervisor">Supervisor</SelectItem>
-                <SelectItem value="Surveyor">Surveyor</SelectItem>
+                <SelectItem value="Software Engineer">Software Engineer</SelectItem>
+                <SelectItem value="Backend Developer">Backend Developer</SelectItem>
+                <SelectItem value="QA Engineer">QA Engineer</SelectItem>
+                <SelectItem value="Frontend Developer">Frontend Developer</SelectItem>
+                <SelectItem value="DevOps Engineer">DevOps Engineer</SelectItem>
+                <SelectItem value="UI Designer">UI Designer</SelectItem>
+                <SelectItem value="HR Manager">HR Manager</SelectItem>
                 <SelectItem value="Project Manager">
                   Project Manager
                 </SelectItem>
